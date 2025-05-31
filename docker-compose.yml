@@ -1,13 +1,13 @@
 services:
   backend:
     build: 
-      context: ./java-backend  # Путь к папке с Dockerfile бэкенда
+      context: ./backend  # Путь к папке с Dockerfile бэкенда
     ports:
       - "8080:8080"       # Проброс порта для локальной разработки
   
   frontend:
     build:
-      context: ./react-frontend  # Путь к папке с Dockerfile фронтенда
+      context: ./frontend  # Путь к папке с Dockerfile фронтенда
     ports:
       - "80:80"           # Доступ по http://localhost
     depends_on:
