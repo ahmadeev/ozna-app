@@ -1,14 +1,14 @@
 services:
   backend:
     build: 
-      context: ./backend  # Путь к папке с Dockerfile бэкенда
+      context: ./backend
     ports:
-      - "8080:8080"       # Проброс порта для локальной разработки
+      - "8080:8080"
   
   frontend:
     build:
-      context: ./frontend  # Путь к папке с Dockerfile фронтенда
+      context: ./frontend # Путь к папке с Dockerfile
     ports:
-      - "80:80"           # Доступ по http://localhost
+      - "80:80"           # Проброс портов
     depends_on:
-      - backend           # Ждём старта бэкенда
+      - backend           # Зависимости
